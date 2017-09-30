@@ -26,7 +26,8 @@
     "serve:static": "cd dist/browser && http-server",
     "serve:dynamic": "node dist/server",
     "start": "ng serve",
-    "postinstall": "npm run build:dynamic && npm run serve:dynamic"
+    "postinstall": "npm run build:dynamic && npm run serve:dynamic",
+    "deploy": "git push origin master && git push heroku master"
   },
   "engines": {
     "node": "8.5.0",
@@ -52,15 +53,14 @@
     "express": "^4.16.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14",
-     "typescript": "~2.3.3"
-  },
-  "devDependencies": {
-    
+    "typescript": "~2.3.3",
     "@angular/language-service": "^4.2.4",
     "@types/node": "^8.0.30",
     "cpy-cli": "^1.0.1",
     "http-server": "^0.10.0",
     "reflect-metadata": "^0.1.10",
     "ts-loader": "^2.3.7"
+  },
+  "devDependencies": {
   }
 }
